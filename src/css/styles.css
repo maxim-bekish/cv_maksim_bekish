@@ -1,3 +1,9 @@
-
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container .hr {
+  margin: 0;
+}
 
 /*# sourceMappingURL=styles.css.map */

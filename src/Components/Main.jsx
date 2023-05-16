@@ -1,10 +1,12 @@
 import React from "react";
-// import styles from "./main.module.css";
+import Home from "./Home";
+import About from "./About";
 const Main = function () {
   return (
     <div>
-      
+      <Home />
+      <About />
     </div>
   );
 };
-export default Main
+export default Main;

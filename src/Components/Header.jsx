@@ -4,17 +4,22 @@ import styles from "./header.module.css";
 const Header = function () {
   return (
     <header className={styles.header}>
-      <div className={styles.title}>
-        <h1>Maksim Bekish</h1>
+      <div className="container">
+        <div className={styles.row}>
+          <nav className={styles.navigation}>
+            <ul>
+              <li className={`${styles.menuLinks} ${styles.menuLinksActive}`}>
+                Home
+              </li>
+              <li className={`${styles.menuLinks}`}>About my</li>
+              <li className={`${styles.menuLinks}`}>Skills</li>
+              <li className={`${styles.menuLinks}`}>Portfolio</li>
+              <li className={`${styles.menuLinks}`}>Contacts</li>
+            </ul>
+          </nav>
+        </div>
+        <hr className="hr" />
       </div>
-      <nav className={styles.navigation}>
-        <ul>
-          <li className={`${styles.menuLinks} ${styles.menuLinksActive}`}>Intro</li>
-          <li className={`${styles.menuLinks}`}>About</li>
-          <li className={`${styles.menuLinks}`}>Works</li>
-          <li className={`${styles.menuLinks}`}>Contact</li>
-        </ul>
-      </nav>
     </header>
   );
 };

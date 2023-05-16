@@ -43,6 +43,10 @@ img {
   border: 0;
 }
 
-.title{
-font-size: 30px;
+li{
+  list-style-type: none;
+}
+body{
+  font-size: 18px;
+  line-height: 21px;
 }

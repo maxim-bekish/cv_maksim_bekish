@@ -1,9 +1,27 @@
-.header {
-  color: brown;
+
+.row {
+padding: 30px 0;
 }
-.title {
+
+.navigation ul {
+  
+  display: flex;
+  gap: 20px;
+
+  justify-content: space-between;
+
 }
-.navigation {
+.menuLinks{
+    color:  #828282;
+    font-family: "Gilroy-Bold";
+    line-height: 22.28px;
+    font-size: 1rem;
+
 }
 .menuLinksActive {
+
+    color:  #070707;
+}
+.hr{
+  margin: 0;
 }

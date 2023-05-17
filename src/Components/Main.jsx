@@ -4,6 +4,7 @@ import About from "./about/About";
 import Skills from "./skills/Skills";
 import Portfolio from "./portfolio/Portfolio";
 import Contacts from "./contacts/Contacts";
+
 const Main = function () {
   return (
     <div>

@@ -15,25 +15,24 @@ const Contacts = function () {
             <p>
               Want to know more or just chat? <br /> You are welcome!
             </p>
-           <div>
+            <div>
               <a target="blanck" href="https://t.me/maxa_max">
                 Send message
               </a>
-              </div>
-            
+            </div>
           </div>
           <div className={styles.footer}>
             <div className={styles.allsvg}>
-              <a href="#">
+              <a target="blanc"  href="https://github.com/maxim-bekish">
                 <img src={github} title="github" alt="github" />
               </a>
-              <a href="#">
+              <a target="blanc"  href="https://www.linkedin.com/in/maksim-bekish-819b8920a/">
                 <img src={linkedin} title="linkedin" alt="linkedin" />
               </a>
-              <a href="#">
+              <a target="blanc"  href="https://codepen.io/maxamax97">
                 <img src={codepen} title="codepen" alt="codepen" />
               </a>
-              <a href="#">
+              <a target="blanc"  href="https://www.instagram.com/">
                 <img src={instagram} title="instagram" alt="instagram" />
               </a>
             </div>

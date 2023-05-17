@@ -15,7 +15,7 @@
   line-height: 3rem;
 }
 .p {
-  font-family: 'Gilroy-Medium';
+  font-family: "Gilroy-Medium";
   display: grid;
   justify-items: center;
   align-items: end;
@@ -23,37 +23,33 @@
   grid-area: 1 / 2 / 2 / 3;
   font-size: 1rem;
   line-height: 1rem;
-
 }
-.allLang{
+.allLang {
   display: grid;
-
 }
 
-/* {
+.wrapLeng {
   display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-} */
+  justify-content: flex-end;
+  align-items: flex-end;
+}
 .lang {
   width: 100%;
   display: inline;
   cursor: pointer;
-   font-family: "Gilroy-Bold";
-  text-transform:uppercase;
+  font-family: "Gilroy-Bold";
+  text-transform: uppercase;
   color: #828282;
-
-
 }
-.lang_active{
+.lang_active {
   color: black;
   border-bottom: 2px solid black;
 }
-.lang:hover{
+.lang:hover {
   color: black;
 }
 
-.allHome_photo{
+.allHome_photo {
   display: flex;
   flex-direction: column;
 }

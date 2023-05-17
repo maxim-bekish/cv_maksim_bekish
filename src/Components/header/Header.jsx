@@ -2,26 +2,43 @@ import React from "react";
 import styles from "./header.module.css";
 
 const Header = function () {
+document.body.addEventListener("scroll", function(){
+  console.log('12')
+})
+
   return (
     <header className={styles.header}>
       <div className="container">
         <div className={styles.row}>
           <nav className={styles.navigation}>
             <ul>
-              <li className={`${styles.menuLinks} ${styles.menuLinksActive}`}>
-                Home
+              <li>
+                <a
+                  className={`${styles.menuLinks} ${styles.menuLinksActive}`}
+                  href="#home"
+                >
+                  home
+                </a>
               </li>
-              <li className={`${styles.menuLinks}`}>
-                <a href="#about">About me</a>
+              <li>
+                <a className={`${styles.menuLinks}`} href="#about">
+                  About me
+                </a>
               </li>
-              <li className={`${styles.menuLinks}`}>
-                <a href="#skills">Skills</a>
+              <li>
+                <a className={`${styles.menuLinks}`} href="#skills">
+                  Skills
+                </a>
               </li>
-              <li className={`${styles.menuLinks}`}>
-                <a href="#portfolio">Portfolio</a>
+              <li>
+                <a className={`${styles.menuLinks}`} href="#portfolio">
+                  Portfolio
+                </a>
               </li>
-              <li className={`${styles.menuLinks}`}>
-                <a href="#contacts">Contacts</a>
+              <li>
+                <a className={`${styles.menuLinks}`} href="#contacts">
+                  Contacts
+                </a>
               </li>
             </ul>
           </nav>

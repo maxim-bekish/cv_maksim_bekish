@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./home.module.css";
-import photoMy from "../img/photoMyTwo.jpg";
+import photoMy from "../../png/photoMyTwo.png";
 const Home = function () {
   return (
     <div className="container">

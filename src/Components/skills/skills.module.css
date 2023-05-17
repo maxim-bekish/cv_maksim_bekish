@@ -1,0 +1,24 @@
+.allsvg {
+  display: flex;
+  justify-content: space-around;
+}
+.title {
+  margin: 90px 0 60px 0;
+
+}
+.wrapperSvg {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.wrapperSvg span {
+
+  font-family: "Gilroy-Bold";
+  color: #828282;
+}
+
+
+.skills{
+margin: 100px 0;
+}

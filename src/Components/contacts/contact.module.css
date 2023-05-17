@@ -1,0 +1,75 @@
+.contacts {
+  margin: 50px 0;
+}
+.appeal p {
+  font-family: "Gilroy-Medium";
+  color: #070707;
+  margin: 0 0 30px 0;
+}
+.appeal {
+  box-sizing: border-box;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.appeal div {
+  display: flex;
+  justify-content: center;
+}
+
+.appeal a {
+  display: block;
+  border: 0;
+
+  background: white;
+  border-radius: 20px;
+  width: 180px;
+  line-height: 2.5rem;
+  color: #070707;
+  text-decoration: none;
+  font-family: "Gilroy-Bold";
+  letter-spacing: 1.25px;
+  transition: all ease 350ms;
+  border: 3px solid black;
+}
+.appeal a:hover {
+  color: white;
+  background: #070707;
+}
+.appeal a:active {
+  background: white;
+  border: 3px solid white;
+}
+.appealNetwork p {
+  color: #828282;
+  font-size: 0.78rem;
+  line-height: 0.81rem;
+}
+
+.allcontent {
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  text-align: center;
+}
+.allsvg {
+  height: 60px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.allsvg a {
+  margin-top: 0px;
+  border-bottom: 0;
+  transition: all ease 350ms;
+}
+.allsvg a:hover {
+  margin-top: -7px;
+  border-bottom: 9px solid black;
+  border-radius: 40px;
+}

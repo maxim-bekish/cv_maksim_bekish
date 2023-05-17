@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./Components/Header";
+import Header from "./Components/header/Header";
 import Main from "./Components/Main";
 
 import "./css/reset.css";

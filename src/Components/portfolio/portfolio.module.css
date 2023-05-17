@@ -1,0 +1,48 @@
+.portfolio{
+  background: #F6F6F6;
+    padding: 100px 0 0 0;
+}
+
+.link {
+  font-family: "Gilroy-Medium";
+  text-decoration: none;
+  color: black;
+  padding: 14px 27px 7px 27px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border: 3px solid #9e9e9e42;
+  border-bottom: none;
+  margin: 10px 0 0px 0;
+}
+.title {
+  margin: 0 0 50px 0;
+}
+.imgPortfolio {
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.line {
+  background: #9e9e9e42;
+  border: 0;
+  margin: 0 0 15px 0;
+  width: 100%;
+  height: 1px;
+}
+
+.allcard {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+}
+.link:hover{
+    background: #9e9e9e42;
+}
+.link:active{
+   background: #F6F6F6;
+   border: 0;
+}

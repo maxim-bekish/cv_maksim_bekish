@@ -11,10 +11,18 @@ const Header = function () {
               <li className={`${styles.menuLinks} ${styles.menuLinksActive}`}>
                 Home
               </li>
-              <li className={`${styles.menuLinks}`}>About my</li>
-              <li className={`${styles.menuLinks}`}>Skills</li>
-              <li className={`${styles.menuLinks}`}>Portfolio</li>
-              <li className={`${styles.menuLinks}`}>Contacts</li>
+              <li className={`${styles.menuLinks}`}>
+                <a href="#abaut">About my</a>
+              </li>
+              <li className={`${styles.menuLinks}`}>
+                <a href="#skills">Skills</a>
+              </li>
+              <li className={`${styles.menuLinks}`}>
+                <a href="#portfolio">Portfolio</a>
+              </li>
+              <li className={`${styles.menuLinks}`}>
+                <a href="#contacts">Contacts</a>
+              </li>
             </ul>
           </nav>
         </div>

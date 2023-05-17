@@ -17,10 +17,10 @@ const Home = function () {
             </p>
           </div>
           <div className={styles.span}>
-            <div>
-              <span>RU</span>
-              <span>|</span>
-              <span>ENG</span>
+            <div className={styles.allLang}>
+              <div className={`${styles.lang} ${styles.lang_active}`}>blr</div>
+              <div className={styles.lang}>eng</div>
+              <div className={styles.lang}>rus</div>
             </div>
           </div>
         </div>

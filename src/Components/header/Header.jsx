@@ -12,7 +12,7 @@ const Header = function () {
                 Home
               </li>
               <li className={`${styles.menuLinks}`}>
-                <a href="#abaut">About my</a>
+                <a href="#about">About me</a>
               </li>
               <li className={`${styles.menuLinks}`}>
                 <a href="#skills">Skills</a>

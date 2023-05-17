@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./about.module.css";
 const About = function () {
   return (
-    <div id="abaut" className={styles.aboutFon}>
+    <div id="about" className={styles.aboutFon}>
       <div className="container" >
         <div className={styles.about}>
           <h2>About me</h2>

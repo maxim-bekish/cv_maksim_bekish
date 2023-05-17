@@ -25,15 +25,34 @@
   line-height: 1rem;
 
 }
-.span {
+.allLang{
   display: grid;
-  grid-area: 1 / 3 / 2 / 4;
-  justify-items: end;
+
 }
-.span span {
-  transform: rotate(270deg);
-  transform-origin: right;
+
+/* {
+  display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+} */
+.lang {
+  width: 100%;
+  display: inline;
+  cursor: pointer;
+   font-family: "Gilroy-Bold";
+  text-transform:uppercase;
+  color: #828282;
+
+
 }
+.lang_active{
+  color: black;
+  border-bottom: 2px solid black;
+}
+.lang:hover{
+  color: black;
+}
+
 .allHome_photo{
   display: flex;
   flex-direction: column;

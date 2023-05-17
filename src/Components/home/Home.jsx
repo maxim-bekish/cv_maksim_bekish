@@ -23,12 +23,12 @@ const Home = () => {
                 initial={textAnimation.hidden}
                 animate={textAnimation.visible}
               >
-                Maksim <br /> Bekish
+                Maksim  Bekish
               </motion.h1>
             </div>
             <div className={styles.p}>
               <p>
-                FrontEnd developer <br /> 26 years old, Minsk
+                FrontEnd developer  26 years old, Minsk
               </p>
             </div>
             <div className={styles.wrapLeng}>

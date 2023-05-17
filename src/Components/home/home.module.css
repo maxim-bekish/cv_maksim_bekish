@@ -60,3 +60,15 @@
   width: 100%;
   max-height: 500px;
 }
+@media (max-width: 600px) {
+  .allLang {
+    display: none;
+  }
+  .allHome_info {
+    margin: 0;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}

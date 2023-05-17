@@ -1,31 +1,32 @@
-
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background:linear-gradient(#d1d1d1e8,#ffffffeb );
+}
 .row {
-padding: 30px 0;
+  padding: 15px 0;
 }
 
-.navigation ul {
+.navigation {
   display: flex;
   gap: 20px;
   justify-content: space-between;
-
 }
 
-
-.navigation ul li a {
-   color:  #828282;
-   text-decoration: none;
-
+.menuLinks {
+  white-space: nowrap;
+  color: #828282;
+  text-decoration: none;
+  font-family: "Gilroy-Bold";
+  line-height: 22.28px;
 }
-.menuLinks{
- 
-    font-family: "Gilroy-Bold";
-    line-height: 22.28px;
-    font-size: 1rem;
-
+.menuLinks:hover {
+  color: #070707;
 }
 .menuLinksActive {
-    color:  #070707;
+  color: #070707;
 }
-.hr{
+.hr {
   margin: 0;
 }

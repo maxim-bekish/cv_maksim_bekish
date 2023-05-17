@@ -1,18 +1,18 @@
 .container {
   max-width: 1000px;
-    padding: 0 15px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 .container .hr {
   margin: 0;
 }
-h2{
+h2 {
   display: flex;
-    justify-content: center;
-    font-family: 'Gilroy-Bold';
-color: #070707;
-font-size: 1.8rem;
-line-height: 2rem;
-
+  justify-content: center;
+  font-family: "Gilroy-Bold";
+  color: #070707;
+  font-size: 1.8rem;
+  line-height: 2rem;
 }
+
 /*# sourceMappingURL=styles.css.map */

@@ -13,13 +13,13 @@ const textAnimation = {
 
 const Home = () => {
   return (
-    <motion.section id="home">
+    <motion.section className={styles.home} id="home">
       <div className="container">
         <div className={styles.allHome}>
           <div className={styles.allHome_info}>
             <div className={styles.h1}>
               <motion.h1
-                transition={{ delay: 0.5, duration: 1 }}
+                transition={{ delay: 1.5, duration: 1 }}
                 initial={textAnimation.hidden}
                 animate={textAnimation.visible}
               >
@@ -36,8 +36,8 @@ const Home = () => {
                 <div className={`${styles.lang} ${styles.lang_active}`}>
                   blr
                 </div>
-                <div className={styles.lang}>eng</div>
-                <div className={styles.lang}>rus</div>
+                {/* <div className={styles.lang}>eng</div>
+                <div className={styles.lang}>rus</div> */}
               </div>
             </div>
           </div>

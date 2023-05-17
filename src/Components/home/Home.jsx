@@ -4,24 +4,25 @@ import photoMy from "../../png/photoMyTwo.png";
 import { motion } from "framer-motion";
 
 const textAnimation = {
-  visible: {
-    x: 0,
-    opacity: 1,
-  },
   hidden: {
-    x: -100,
+    x: -200,
     opacity: 0,
   },
+  visible: { x: 0, opacity: 1 },
 };
 
 const Home = () => {
   return (
-    <motion.section initial="hidden" whileInView="visible" id="home">
+    <motion.section id="home">
       <div className="container">
         <div className={styles.allHome}>
           <div className={styles.allHome_info}>
             <div className={styles.h1}>
-              <motion.h1 variants={textAnimation}>
+              <motion.h1
+                transition={{ delay: 0.5, duration: 1 }}
+                initial={textAnimation.hidden}
+                animate={textAnimation.visible}
+              >
                 Maksim <br /> Bekish
               </motion.h1>
             </div>

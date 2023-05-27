@@ -2,7 +2,12 @@ import React from "react";
 import styles from "./header.module.css";
 import { motion } from "framer-motion";
 
-const Header = function () {
+
+
+
+
+
+const Header = function (active, setActive) {
   const headerTitle = [
     {
       value: "Home",
@@ -44,8 +49,12 @@ const Header = function () {
       y: 100,
     },
   };
+    // className={`${active ? "menu active" : "menu"} ${styles.header}`}
   return (
-    <header className={styles.header}>
+    <motion.header
+  className={active? 'menu active' : 'menu'}
+
+    >
       <div className="container">
         <div className={styles.row}>
           <nav className={styles.navigation}>
@@ -65,7 +74,7 @@ const Header = function () {
           </nav>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 export default Header;

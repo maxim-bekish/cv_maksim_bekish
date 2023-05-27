@@ -14,5 +14,22 @@ h2 {
   font-size: 1.8rem;
   line-height: 2rem;
 }
+.closedBurger{
+display: none;
+}
 
+@media (max-width: 600px) {
+.closedBurger{
+display: block;
+position: absolute;
+top: 25px;
+right: 25px;
+}
+
+.menu{
+transform: translate(-100%);
+}
+.menu.active{
+transform: translate(0);
+}}
 /*# sourceMappingURL=styles.css.map */

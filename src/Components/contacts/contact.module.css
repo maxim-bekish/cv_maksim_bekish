@@ -44,6 +44,16 @@
   color: #828282;
   font-size: 0.78rem;
   line-height: 0.81rem;
+  margin-top: 10px;
+}
+.appealNetwork a {
+  text-decoration: none;
+  color: #828282;
+  font-size: 0.78rem;
+  line-height: 0.81rem;
+}
+.appealNetwork a:hover{
+  color: black;
 }
 
 .allcontent {

@@ -23,20 +23,26 @@ const Contacts = function () {
           </div>
           <div className={styles.footer}>
             <div className={styles.allsvg}>
-              <a target="blanc"  href="https://github.com/maxim-bekish">
+              <a target="blanc" href="https://github.com/maxim-bekish">
                 <img src={github} title="github" alt="github" />
               </a>
-              <a target="blanc"  href="https://www.linkedin.com/in/maksim-bekish-819b8920a/">
+              <a
+                target="blanc"
+                href="https://www.linkedin.com/in/maksim-bekish-819b8920a/"
+              >
                 <img src={linkedin} title="linkedin" alt="linkedin" />
               </a>
-              <a target="blanc"  href="https://codepen.io/maxamax97">
+              <a target="blanc" href="https://codepen.io/maxamax97">
                 <img src={codepen} title="codepen" alt="codepen" />
               </a>
-              <a target="blanc"  href="https://www.instagram.com/">
+              <a target="blanc" href="https://www.instagram.com/it_maxa_max/">
                 <img src={instagram} title="instagram" alt="instagram" />
               </a>
             </div>
             <div className={styles.appealNetwork}>
+              <a target="blanc" href="mailto:maxamax997@gmail.com">
+                maxamax997@gmail.com
+              </a>
               <p>I am also waiting for you in my social networks.</p>
             </div>
           </div>

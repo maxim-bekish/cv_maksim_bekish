@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./portfolio.module.css";
 import dising from "../../png/dising.png";
-import slider from "../../png/slider.png";
+import chart from "../../png/chart.png";
 import youTalk from "../../png/youtalk.png";
 
 const Portfolio = function () {
@@ -38,12 +38,12 @@ const Portfolio = function () {
             <a
               className={styles.link}
               target="blanc"
-              href="https://maxim-bekish.github.io/slider-js/"
+              href="https://test-maxim-bekish.vercel.app/"
             >
-              Slider
+              Chart (React)
             </a>
             <hr className={styles.line} />
-            <img className={styles.imgPortfolio} src={slider} alt="" />
+            <img className={styles.imgPortfolio} src={chart} alt="" />
           </div>
         </div>
       </div>

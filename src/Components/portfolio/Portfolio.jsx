@@ -1,8 +1,29 @@
 import React from "react";
 import styles from "./portfolio.module.css";
-import dising from "../../png/dising.png";
-import chart from "../../png/chart.png";
-import youTalk from "../../png/youtalk.png";
+import CardPortfolio from "./CardPortfolio";
+
+const portfolio = {
+  designProject: {
+    title: `IC "Repair Design Project"`,
+    link: "https://maxim-bekish.github.io/design-studio/",
+    url: require(`../../png/dising.png`),
+  },
+  youTalk: {
+    title: `YouTalk`,
+    link: "https://maxim-bekish.github.io/youtalk/",
+    url: require(`../../png/youtalk.png`),
+  },
+  chart: {
+    title: `Chart (React)`,
+    link: "https://test-maxim-bekish.vercel.app/",
+    url: require(`../../png/chart.png`),
+  },
+  snack: {
+    title: `Snack (Game)`,
+    link: "https://snack-js.vercel.app/",
+    url: require(`../../png//snack.png`),
+  },
+};
 
 const Portfolio = function () {
   return (
@@ -10,41 +31,10 @@ const Portfolio = function () {
       <div className="container">
         <h2 className={styles.title}>Portfolio</h2>
         <div className={styles.allcard}>
-          <div className={styles.card}>
-            <a
-              className={styles.link}
-              target="blanc"
-              href="https://maxim-bekish.github.io/design-studio/"
-            >
-              IC "Repair Design Project"
-            </a>
-            <hr className={styles.line} />
-            <img className={styles.imgPortfolio} src={dising} alt="" />
-          </div>
-
-          <div className={styles.card}>
-            <a
-              className={styles.link}
-              target="blanc"
-              href="https://maxim-bekish.github.io/youtalk/"
-            >
-              YouTalk
-            </a>
-            <hr className={styles.line} />
-            <img className={styles.imgPortfolio} src={youTalk} alt="" />
-          </div>
-
-          <div className={styles.card}>
-            <a
-              className={styles.link}
-              target="blanc"
-              href="https://test-maxim-bekish.vercel.app/"
-            >
-              Chart (React)
-            </a>
-            <hr className={styles.line} />
-            <img className={styles.imgPortfolio} src={chart} alt="" />
-          </div>
+          <CardPortfolio props={portfolio.designProject} />
+          <CardPortfolio props={portfolio.youTalk} />
+          <CardPortfolio props={portfolio.chart} />
+          <CardPortfolio props={portfolio.snack} />
         </div>
       </div>
     </div>

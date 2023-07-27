@@ -5,6 +5,7 @@ import Skills from "./skills/Skills";
 import Portfolio from "./portfolio/Portfolio";
 import Contacts from "./contacts/Contacts";
 
+
 const Main = function () {
   return (
     <main className="main">

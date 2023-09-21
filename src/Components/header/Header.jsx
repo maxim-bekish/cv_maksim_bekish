@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 function Header() {
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
+
   const Wrapper = styled.header`
     padding-top: 15px;
 
@@ -32,11 +33,13 @@ function Header() {
       padding-top: 0;
       margin-bottom: ${active ? "0px" : "-40px"};
       div {
-        height: ${active ? "100vh" : "40px"};
-        background: ${active
-          ? "linear-gradient(90deg,rgba(255, 255, 255, 0) 0%,rgb(187 191 194 / 35%) 10%,rgb(141 149 153 / 73%) 23%,rgb(89 101 107 / 78%) 39%,rgb(26 43 51 / 81%) 64%,rgb(26 43 51 / 98%) 90%,rgba(26, 43, 51, 1) 100%)"
-          : "none"};
-        /* display: ${active ? "flex" : "none"}; */
+        height: ${active ? "100vh" : "35px"};
+        background: ${
+          active
+            ? "linear-gradient(90deg,rgba(255, 255, 255, 0) 0%,rgb(187 191 194 / 35%) 10%,rgb(141 149 153 / 73%) 23%,rgb(89 101 107 / 78%) 39%,rgb(26 43 51 / 81%) 64%,rgb(26 43 51 / 98%) 90%,rgba(26, 43, 51, 1) 100%)"
+            : "none"
+        };
+
         justify-content: space-between;
         box-shadow: ${active ? "20px 0 0 2vmax rgba(26, 43, 51, 1)" : "none"};
 
@@ -57,14 +60,14 @@ function Header() {
         div {
           background: rgba(255, 0, 0, 0);
           box-shadow: ${active ? "20px 0 0 0vmax rgba(255, 0, 0, 0)" : "none"};
-          width: 30px;
+          width: 35px;
           height: 35px;
           position: relative;
           z-index: 2;
           overflow: hidden;
 
           span {
-            width: 50px;
+            width: 30px;
             height: 4px;
             position: absolute;
             top: 50%;
@@ -72,17 +75,48 @@ function Header() {
             transform: translate(-50%, -50%);
             background-color: #222222;
             transition: all 0.5s;
+            &:nth-of-type(1) {
+              display: ${active ? "none" : "block"};
+                  top: ${active ? "50%" : "calc(50% - 10px)"};
+                transform: ${
+                  active
+                    ? "translate(-50%, 0%) rotate(45deg)"
+                    : " translate(-50%, -50%)"
+                };
+            }
+            &:nth-of-type(2) {
+              top: ${active ? "50%" : "calc(50% )"};
+              transform: ${
+                active
+                  ? "translate(-50%, 0%) rotate(45deg)"
+                  : " translate(-50%, -50%)"
+              };
+            }
+            &:nth-of-type(3) {
+              top: ${active ? "50%" : "calc(50% + 10px)"};
+
+              transform: ${
+                active
+                  ? "translate(-50%, 0%) rotate(-45deg)"
+                  : " translate(-50%, -50%)"
+              };
+            } }
           }
 
-          span:nth-of-type(2) {
-            top: calc(50% - 10px);
+          /* .activeButton span:nth-of-type(1) {
+            display: none;
           }
-          span:nth-of-type(3) {
-            top: calc(50% + 10px);
+          .activeButton span:nth-of-type(2) {
+            top: 50%;
+            transform: translate(-50%, 0%) rotate(45deg);
           }
+          .activeButton span:nth-of-type(3) {
+            top: 50%;
+            transform: translate(-50%, 0%) rotate(-45deg);
+          } */
         }
       }
-    }
+    
   `;
   const headerTitle = [
     {

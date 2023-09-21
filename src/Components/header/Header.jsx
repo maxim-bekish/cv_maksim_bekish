@@ -44,10 +44,11 @@ function Header() {
           flex-direction: column;
           align-items: end;
           gap: 0px;
-          height: 90%;
+          padding-top: 20px;
+          height: 65vh;
 
           a {
-            font-size: 6rem !important;
+            font-size: 4rem !important;
           }
         }
         div {

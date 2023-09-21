@@ -1,6 +1,22 @@
 import React from "react";
-import styles from "./portfolio.module.css";
 import CardPortfolio from "./CardPortfolio";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  background: #f6f6f6;
+  padding: 80px 0 0 0;
+  box-shadow: 0 0 0 100vmax #f6f6f6;
+  clip-path: inset(0-100vmax);
+
+  h2 {
+    margin: 0 0 50px 0;
+  }
+  div {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+  }
+`;
 
 const portfolio = {
   designProject: {
@@ -27,17 +43,15 @@ const portfolio = {
 
 const Portfolio = function () {
   return (
-    <div id="portfolio" className={styles.portfolio}>
-      <div className="container">
-        <h2 className={styles.title}>Portfolio</h2>
-        <div className={styles.allcard}>
-          <CardPortfolio props={portfolio.designProject} />
-          <CardPortfolio props={portfolio.youTalk} />
-          <CardPortfolio props={portfolio.chart} />
-          <CardPortfolio props={portfolio.snack} />
-        </div>
+    <Wrapper id="portfolio" >
+      <h2 >Portfolio</h2>
+      <div >
+        <CardPortfolio props={portfolio.designProject} />
+        <CardPortfolio props={portfolio.youTalk} />
+        <CardPortfolio props={portfolio.chart} />
+        <CardPortfolio props={portfolio.snack} />
       </div>
-    </div>
+    </Wrapper>
   );
 };
 

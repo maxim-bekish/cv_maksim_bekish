@@ -8,7 +8,7 @@ import Contacts from "./contacts/Contacts";
 
 const Main = function () {
   return (
-    <main className="main">
+    <main >
       <Home />
       <About />
       <Skills />

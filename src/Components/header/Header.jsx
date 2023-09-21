@@ -17,7 +17,7 @@ function Header() {
           text-align: end;
           a {
             font-size: 1.2rem;
-            color: #828282;
+            color: #a0acb3;
             font-family: "Gilroy-Bold";
             line-height: 22.28px;
             text-decoration: none;
@@ -27,9 +27,12 @@ function Header() {
       }
     }
     @media all and (max-width: 600px) {
+      display: ${active ? "block" : "flex"};
+      justify-content: flex-end;
       padding-top: 0;
+      margin-bottom: ${active ? "0px" : "-40px"};
       div {
-        height: 100vh;
+        height: ${active ? "100vh" : "40px"};
         background: ${active
           ? "linear-gradient(90deg,rgba(255, 255, 255, 0) 0%,rgb(187 191 194 / 35%) 10%,rgb(141 149 153 / 73%) 23%,rgb(89 101 107 / 78%) 39%,rgb(26 43 51 / 81%) 64%,rgb(26 43 51 / 98%) 90%,rgba(26, 43, 51, 1) 100%)"
           : "none"};
@@ -48,14 +51,14 @@ function Header() {
           height: 65vh;
 
           a {
-            font-size: 4rem !important;
+            font-size: 3rem !important;
           }
         }
         div {
           background: rgba(255, 0, 0, 0);
           box-shadow: ${active ? "20px 0 0 0vmax rgba(255, 0, 0, 0)" : "none"};
-          width: 50px;
-          height: 50px;
+          width: 30px;
+          height: 35px;
           position: relative;
           z-index: 2;
           overflow: hidden;
@@ -72,10 +75,10 @@ function Header() {
           }
 
           span:nth-of-type(2) {
-            top: calc(50% - 15px);
+            top: calc(50% - 10px);
           }
           span:nth-of-type(3) {
-            top: calc(50% + 15px);
+            top: calc(50% + 10px);
           }
         }
       }

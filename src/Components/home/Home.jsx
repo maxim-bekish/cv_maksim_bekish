@@ -67,6 +67,7 @@ const Wrapper = styled.div`
     }
   }
   @media (max-width: 600px) {
+    padding-top: 0px;
     .allLang {
       display: none;
     }

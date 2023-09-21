@@ -11,13 +11,14 @@ function Header() {
 
     div {
       nav {
+        display: flex;
         justify-content: space-between;
         gap: 15px;
         li {
           list-style-type: none;
           text-align: end;
           a {
-            font-size: 1.2rem;
+            font-size: 2rem;
             color: #a0acb3;
             font-family: "Gilroy-Bold";
             line-height: 22.28px;
@@ -103,17 +104,6 @@ function Header() {
             } }
           }
 
-          /* .activeButton span:nth-of-type(1) {
-            display: none;
-          }
-          .activeButton span:nth-of-type(2) {
-            top: 50%;
-            transform: translate(-50%, 0%) rotate(45deg);
-          }
-          .activeButton span:nth-of-type(3) {
-            top: 50%;
-            transform: translate(-50%, 0%) rotate(-45deg);
-          } */
         }
       }
     

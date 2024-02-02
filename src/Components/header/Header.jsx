@@ -11,17 +11,13 @@ function Header() {
     position: fixed;
     z-index: 2;
     left: 0px;
-    background-color: white;
+    background-color: #ffffffb8;
     width: 100%;
 
     div {
-      padding-top: 25px;
+      /* display: none; */
+      padding: 12px 0;
       max-width: 1250px;
-      /* width: 100%; */
-      /* height: 60px; */
- 
-      /* z-index: 5; */
-      /* background-color: white; */
       margin: 0 auto;
       nav {
         /* max-width: 1250px; */
@@ -36,7 +32,7 @@ function Header() {
           flex-shrink: 1;
           a {
             font-size: 2rem;
-            color: #a0acb3;
+            color: #3e505a;
             font-family: "Gilroy-Bold";
             line-height: 22.28px;
             text-decoration: none;
@@ -44,17 +40,21 @@ function Header() {
           }
         }
       }
+      div {
+        display: none;
+      }
     }
     @media all and (max-width: 600px) {
       display: ${active ? "block" : "flex"};
       justify-content: flex-end;
-      padding-top: 0;
       margin-bottom: ${active ? "0px" : "-40px"};
+      background-color: rgba(0, 0, 0, 0);
       div {
+        padding-top: 0px;
         position: static;
         height: ${active ? "100vh" : "35px"};
         background: ${active
-          ? "linear-gradient(90deg,rgba(255, 255, 255, 0) 0%,rgb(187 191 194 / 35%) 10%,rgb(141 149 153 / 73%) 23%,rgb(89 101 107 / 78%) 39%,rgb(26 43 51 / 81%) 64%,rgb(26 43 51 / 98%) 90%,rgba(26, 43, 51, 1) 100%)"
+          ? "linear-gradient(90deg,rgb(187 191 194 / 78%) 0%,rgb(187 191 194 / 80%) 10%,rgb(141 149 153 / 90%) 23%,rgb(89 101 107 / 92%) 39%,rgb(26 43 51 / 88%) 64%,rgb(26 43 51) 90%,rgba(26, 43, 51, 1) 100%)"
           : "none"};
 
         justify-content: space-between;
@@ -69,18 +69,24 @@ function Header() {
           gap: 0px;
           padding-top: 20px;
           height: 65vh;
-
+          li {
+            margin-right: 20px;
+          
           a {
             font-size: 3rem !important;
-          }
+            color: #969ea3;
+          }}
         }
         div {
+          display: block;
           background: rgba(255, 0, 0, 0);
           box-shadow: ${active ? "20px 0 0 0vmax rgba(255, 0, 0, 0)" : "none"};
           width: 35px;
           height: 35px;
           position: relative;
           z-index: 2;
+          top: ${active ? "25px" : "11px"};
+          left: ${active ? "25px" : "-20px"};
           overflow: hidden;
 
           span {
@@ -93,6 +99,7 @@ function Header() {
             background-color: #353b46;
             /* background-color: ${active ? "#adb6c6" : "#adb6c6"}; */
             transition: all 0.5s;
+
             &:nth-of-type(1) {
               display: ${active ? "none" : "block"};
               top: ${active ? "50%" : "calc(50% - 10px)"};

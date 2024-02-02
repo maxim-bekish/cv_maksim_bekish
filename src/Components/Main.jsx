@@ -8,7 +8,7 @@ import Contacts from "./contacts/Contacts";
 
 const Main = function () {
   return (
-    <main style={{ padding: "55px 0 0 0" }}>
+    <main style={{ padding: "40px 0 0 0" }}>
       <Home />
       <About />
       <Skills />

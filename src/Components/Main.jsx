@@ -8,12 +8,12 @@ import Contacts from "./contacts/Contacts";
 
 const Main = function () {
   return (
-    <main >
+    <main style={{ padding: "55px 0 0 0" }}>
       <Home />
       <About />
       <Skills />
-      <Portfolio/>
-      <Contacts/>
+      <Portfolio />
+      <Contacts />
     </main>
   );
 };

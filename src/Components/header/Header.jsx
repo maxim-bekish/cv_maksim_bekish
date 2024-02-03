@@ -71,11 +71,12 @@ function Header() {
           height: 65vh;
           li {
             margin-right: 20px;
-          
-          a {
-            font-size: 3rem !important;
-            color: #969ea3;
-          }}
+
+            a {
+              font-size: 3rem !important;
+              color: #969ea3;
+            }
+          }
         }
         div {
           display: block;

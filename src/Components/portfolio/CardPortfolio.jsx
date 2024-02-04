@@ -1,15 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
+
+const color= '#474747';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-
-    .img {
-      max-width: 100%;
-    }
-  
 
   .btn {
     font-family: "Gilroy-Medium";
@@ -23,6 +19,8 @@ const Wrapper = styled.div`
     position: relative;
     text-decoration: none;
     transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
 
     &:before,
     &:after {
@@ -49,7 +47,7 @@ const Wrapper = styled.div`
     }
 
     &:hover {
-      background: #3d58bb3b;
+      /* background: #3d58bb3b; */
     }
 
     &:hover:before {
@@ -60,6 +58,99 @@ const Wrapper = styled.div`
       transform: translate(5px, 5px);
     }
   }
+
+  /* .btn-flip {
+    font-family: "IM Fell Double Pica SC", serif;
+    opacity: 1;
+    outline: 0;
+    color: #fff;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Open Sans";
+    text-transform: uppercase;
+
+    &:hover {
+      &:after {
+        opacity: 1;
+        transform: translateY(0) rotateX(0);
+      }
+
+      &:before {
+        opacity: 0;
+        transform: translateY(50%) rotateX(90deg);
+      }
+    }
+
+    &:after {
+      top: 0;
+      left: 0;
+      opacity: 0;
+      width: 100%;
+      color: #323237;
+      display: block;
+      transition: 0.5s;
+      position: absolute;
+      background: #adadaf;
+      content: attr(data-back);
+      transform: translateY(-50%) rotateX(90deg);
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      opacity: 1;
+      color: #adadaf;
+      display: block;
+      padding: 0 30px;
+      line-height: 40px;
+      transition: 0.5s;
+      position: relative;
+      background: #323237;
+      content: attr(data-front);
+      transform: translateY(0) rotateX(0);
+    }
+  } */
+
+  .btn-flip {
+    padding: 1em 2em;
+    border: 0.125em solid ${color};
+    box-shadow: 0.5em 0.5em 0 -0.125em #fff, 0.5em 0.5em lighten(${color}, 35%);
+    overflow: hidden;
+    position: relative;
+    color: ${color};
+    font: 18px "Space Mono";
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+    &:after {
+      content: "";
+      background: ${color};
+      width: 150%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transform: rotate(-45deg) translateY(-3em);
+      transform-origin: 0% 100%;
+      transition: 0.3s;
+    }
+    &:hover {
+      color: #fff;
+      box-shadow: 1em 1em 0 -0.125em #fff, 1em 1em lighten(${color}, 35%);
+      &:after {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  .active {
+    background-color: #e7e7ff80;
+  }
   hr {
     background: #9e9e9e42;
     border: 0;
@@ -67,36 +158,77 @@ const Wrapper = styled.div`
     width: 100%;
     height: 1px;
   }
+  .containerPortfolio {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    .sectionLeft {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .sectionRight {
+      .description {
+        p {
+          font-family: "Gilroy-Medium";
+          margin-bottom: 15px;
+        }
+      }
+      .img {
+        max-width: 100%;
+      }
+    }
+  }
 `;
 
 const CardPortfolio = function ({ props }) {
+  const [isActive, setIsActive] = useState(true);
+
   return (
     <Wrapper>
-      <a target="blanc" className="btn" href={props.link}>
-        {props.title}
-      </a>
+      <div>
+        <a target="blanc" className="btn-flip" href={props.link}>
+          {props.title}
+        </a>
+      </div>
 
-      <hr />
-      <div className="container">
-        {/* <section>
-          <ul>
-            <li>Photo</li>
-            <li>Description</li>
-          </ul>
-        </section> */}
-        <section>
-          <div className="description">
+      <div className="container containerPortfolio">
+        <section className="sectionLeft">
+          <button
+            onClick={() => setIsActive(!isActive)}
+            className={`btn ${isActive ? "active" : ""}`}
+          >
+            Photo
+          </button>
+          <button
+            onClick={() => setIsActive(!isActive)}
+            className={`btn ${isActive ? "" : "active"}`}
+          >
+            Description
+          </button>
+        </section>
+        <section className="sectionRight">
+          <div
+            style={{ display: `${isActive ? "none" : "block"}` }}
+            className="description"
+          >
             {props.description.map((element, id) => {
               return (
                 <p id={`key-${id}`}>
-                  <span> {id + 1}.</span> {element}
+                  <strong> {id + 1}.</strong> {element}
                 </p>
               );
             })}
           </div>
-          <img className="img" src={props.url} alt="img" />
+          <img
+            style={{ display: `${isActive ? "block" : "none"}` }}
+            className="img"
+            src={props.url}
+            alt="img"
+          />
         </section>
       </div>
+      <hr />
     </Wrapper>
   );
 };

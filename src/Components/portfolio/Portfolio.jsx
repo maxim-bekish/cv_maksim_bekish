@@ -4,16 +4,18 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   background: #f6f6f6;
-  padding: 80px 0 0 0;
+  padding: 40px 0;
   box-shadow: 0 0 0 100vmax #f6f6f6;
   clip-path: inset(0-100vmax);
 
   h2 {
+   font-size: 35px;
     margin: 0 0 50px 0;
   }
   div {
     display: flex;
-    gap: 40px;
+    gap: 20px;
+    margin-bottom: 20px;
     flex-direction: column;
   }
 `;

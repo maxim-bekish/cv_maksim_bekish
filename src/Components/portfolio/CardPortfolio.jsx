@@ -165,7 +165,7 @@ const CardPortfolio = function ({ props }) {
             {props.description.map((element, id) => {
               return (
                 <p id={`key-${id}`}>
-                  <strong> {id + 1}.</strong> {element}
+            {element}
                 </p>
               );
             })}

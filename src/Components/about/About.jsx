@@ -22,14 +22,16 @@ const Wrapper = styled.div`
 const About = function () {
   return (
     <Wrapper id="about">
-      <div >
+      <div>
         <h2>About me</h2>
         <p>
-          Hi, I'm Maxim - FrontEnd developer from Minsk. <br />I am interested
-          in programming and everything related to it. <br /> <br /> I'm
-          studying at courses "Frontend-developer PRO" in SkillFactory.
-          <br /> <br /> Ready to implement excellent projects with wonderful
-          people.
+          Я обучаюсь в SF. <br />В свободное
+          время вместе с командой реализуем свой проект. <br /> Мне интересно
+          создание веб-приложений с использованием
+          JavaScript/TypeScript и React. <br /> Я коммуникабелен, стремлюсь к
+          постоянному развитию и адаптируюсь к новым технологиям. <br />
+          Готов брать на себя ответственность и способствовать развитию проектов
+          и компаний.
         </p>
       </div>
     </Wrapper>

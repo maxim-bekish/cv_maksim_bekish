@@ -103,6 +103,7 @@ const Wrapper = styled.div`
     height: 1px;
   }
   .containerPortfolio {
+    width: 100%;
     display: flex;
     flex-direction: row;
     gap: 70px;
@@ -163,12 +164,9 @@ const CardPortfolio = function ({ props }) {
             className="description"
           >
             {props.description.map((element, id) => {
-              return (
-                <p id={`key-${id}`}>
-            {element}
-                </p>
-              );
+              return <p id={`key-${id}`}>{element}</p>;
             })}
+            <a target="blanc" href={props.link}>Ссылка на проект</a>
           </div>
           <img
             style={{ display: `${isActive ? "block" : "none"}` }}

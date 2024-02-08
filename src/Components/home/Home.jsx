@@ -101,7 +101,7 @@ const Home = () => {
             Maksim Bekish
           </motion.h1>
 
-          <p>FrontEnd developer 26 years old, Minsk</p>
+          <p>FrontEnd developer 26 лет, Минск</p>
           <div>
             <p>blr</p>
             <div></div>

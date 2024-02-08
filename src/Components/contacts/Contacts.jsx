@@ -115,11 +115,11 @@ const Contacts = function () {
       <section>
         <div>
           <p>
-            Want to know more or just chat? <br /> You are welcome!
+            Хотите узнать больше или просто пообщаться? <br />
           </p>
           <div>
             <a target="blanck" href="https://t.me/maxa_max">
-              Send message
+              Напиши мне
             </a>
           </div>
         </div>
@@ -137,7 +137,7 @@ const Contacts = function () {
             <a target="blanc" href="mailto:maxamax997@gmail.com">
               maxamax997@gmail.com
             </a>
-            <p>I am also waiting for you in my social networks.</p>
+            <p>Я также жду вас в своих социальных сетях.</p>
           </div>
         </div>
       </section>

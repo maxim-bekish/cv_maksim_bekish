@@ -1,8 +1,9 @@
 import React from "react";
-import github from "../../svg/github.svg";
-import codepen from "../../svg/codepen.svg";
-import instagram from "../../svg/instagram.svg";
-import linkedin from "../../svg/linkedin.svg";
+import gitHubSVG from "../../svg/github.svg";
+import codePenSVG from "../../svg/codePen.svg";
+import instagramSVG from "../../svg/instagram.svg";
+import linkedinSVG from "../../svg/linkedin.svg";
+import telegramSVG from "../../svg/telegram.svg";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -92,6 +93,21 @@ const Wrapper = styled.div`
   }
 `;
 
+const arrayContacts = [
+  { text: "GitHub", logo: gitHubSVG, link: "https://github.com/maxim-bekish" },
+  {
+    text: "Linkedin",
+    logo: linkedinSVG,
+    link: "https://www.linkedin.com/in/maksim-bekish-819b8920a/",
+  },
+  { text: "CodePen", logo: codePenSVG, link: "https://codepen.io/maxamax97" },
+  {
+    text: "Instagram",
+    logo: instagramSVG,
+    link: "https://www.instagram.com/it_maxa_max/",
+  },
+  { text: "Telegram", logo: telegramSVG, link: "https://t.me/maxa_max" },
+];
 const Contacts = function () {
   return (
     <Wrapper id="contacts">
@@ -109,21 +125,13 @@ const Contacts = function () {
         </div>
         <div>
           <div>
-            <a target="blanc" href="https://github.com/maxim-bekish">
-              <img src={github} title="github" alt="github" />
-            </a>
-            <a
-              target="blanc"
-              href="https://www.linkedin.com/in/maksim-bekish-819b8920a/"
-            >
-              <img src={linkedin} title="linkedin" alt="linkedin" />
-            </a>
-            <a target="blanc" href="https://codepen.io/maxamax97">
-              <img src={codepen} title="codepen" alt="codepen" />
-            </a>
-            <a target="blanc" href="https://www.instagram.com/it_maxa_max/">
-              <img src={instagram} title="instagram" alt="instagram" />
-            </a>
+            {arrayContacts.map((el) => {
+              return (
+                <a target="blanc" href={el.link}>
+                  <img src={el.logo} title={el.name} alt={el.name} />
+                </a>
+              );
+            })}
           </div>
           <div>
             <a target="blanc" href="mailto:maxamax997@gmail.com">

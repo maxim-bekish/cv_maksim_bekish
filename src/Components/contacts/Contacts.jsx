@@ -95,19 +95,31 @@ const Wrapper = styled.div`
 `;
 
 const arrayContacts = [
-  { text: "GitHub", logo: {gitHubSVG}, link: "https://github.com/maxim-bekish" },
+  {
+    text: "GitHub",
+    logo: require(`../../svg/github.svg`),
+    link: "https://github.com/maxim-bekish",
+  },
   {
     text: "Linkedin",
-    logo: {linkedinSVG},
+    logo: require(`../../svg/linkedin.svg`),
     link: "https://www.linkedin.com/in/maksim-bekish-819b8920a/",
   },
-  { text: "CodePen", logo: {codePenSVG}, link: "https://codepen.io/maxamax97" },
+  {
+    text: "CodePen",
+    logo: require(`../../svg/codePen.svg`),
+    link: "https://codepen.io/maxamax97",
+  },
   {
     text: "Instagram",
-    logo: {instagramSVG},
+    logo: require(`../../svg/instagram.svg`),
     link: "https://www.instagram.com/it_maxa_max/",
   },
-  { text: "Telegram", logo: telegramSVG, link: "https://t.me/maxa_max" },
+  {
+    text: "Telegram",
+    logo: require(`../../svg/telegram.svg`),
+    link: "https://t.me/maxa_max",
+  },
 ];
 const Contacts = function () {
   const { t } = useTranslation();
@@ -141,7 +153,6 @@ const Contacts = function () {
             <a target="blanc" href="mailto:maxamax997@gmail.com">
               maxamax997@gmail.com
             </a>
-           
 
             <p> {t("footer.end")}</p>
           </div>

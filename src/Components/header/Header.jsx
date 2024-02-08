@@ -2,8 +2,10 @@ import React, { useState } from "react";
 
 import { motion } from "framer-motion";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
 function Header() {
+    const { t } = useTranslation();
   const [active, setActive] = useState(false);
 
   const Wrapper = styled.header`
@@ -128,23 +130,23 @@ function Header() {
   `;
   const headerTitle = [
     {
-      value: "Home",
+      value: t("header.home"),
       href: "#home",
     },
     {
-      value: "About me",
+      value: t("header.about"),
       href: "#about",
     },
     {
-      value: "Skills",
+      value: t("header.skills"),
       href: "#skills",
     },
     {
-      value: "Portfolio",
+      value: t("header.portfolio"),
       href: "#portfolio",
     },
     {
-      value: "Contacts",
+      value: t("header.contacts"),
       href: "#contacts",
     },
   ];
@@ -153,13 +155,13 @@ function Header() {
       opacity: 1,
       y: 0,
       transition: {
-        delay: i * 0.3,
+        delay: i * 0.2,
         duration: 1,
       },
     }),
     hidden: {
       opacity: 0,
-      y: 100,
+      y: -100,
     },
   };
 

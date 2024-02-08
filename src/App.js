@@ -1,6 +1,8 @@
 import Header from "./Components/header/Header";
 import Main from "./Components/Main";
 import styled from "styled-components";
+import { Suspense } from "react";
+
 const Container = styled.div`
   /* padding: 0 15px; */
   margin: 0 auto;
@@ -21,16 +23,25 @@ const Container = styled.div`
   }
 `;
 
-
-
-
 function App() {
+ 
+
   return (
     <Container>
       <Header />
+ 
+   
+
       <Main />
     </Container>
+ 
   );
 }
 
-export default App;
+export default function WrapperApp() {
+  return (
+    <Suspense fallback="...loading">
+      <App />
+    </Suspense>
+  );
+}

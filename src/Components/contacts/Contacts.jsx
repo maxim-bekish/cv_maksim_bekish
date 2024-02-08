@@ -5,6 +5,7 @@ import instagramSVG from "../../svg/instagram.svg";
 import linkedinSVG from "../../svg/linkedin.svg";
 import telegramSVG from "../../svg/telegram.svg";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
 const Wrapper = styled.div`
   padding: 50px 0;
@@ -109,17 +110,20 @@ const arrayContacts = [
   { text: "Telegram", logo: telegramSVG, link: "https://t.me/maxa_max" },
 ];
 const Contacts = function () {
+  const { t } = useTranslation();
+
   return (
     <Wrapper id="contacts">
-      <h2>Contacts</h2>
+      <h2>{t("header.contacts")}</h2>
       <section>
         <div>
           <p>
-            Хотите узнать больше или просто пообщаться? <br />
+            {t("footer.title")}
+            <br />
           </p>
           <div>
             <a target="blanck" href="https://t.me/maxa_max">
-              Напиши мне
+              {t("footer.button")}
             </a>
           </div>
         </div>
@@ -137,7 +141,9 @@ const Contacts = function () {
             <a target="blanc" href="mailto:maxamax997@gmail.com">
               maxamax997@gmail.com
             </a>
-            <p>Я также жду вас в своих социальных сетях.</p>
+           
+
+            <p> {t("footer.end")}</p>
           </div>
         </div>
       </section>

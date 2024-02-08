@@ -8,6 +8,7 @@ import svgSASS from "../../svg/icons8-sass.svg";
 import svgWEBPACK from "../../svg/icons8-webpack.svg";
 import { motion } from "framer-motion";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
 const Wrapper = styled.div`
   padding: 80px 0;
@@ -42,9 +43,10 @@ const skills = [
 ];
 
 const Skills = function () {
+    const { t } = useTranslation();
   return (
     <Wrapper id="skills">
-      <h2>Skills</h2>
+      <h2>{t("header.skills")}</h2>
       <div>
         {skills.map((el, id) => (
           <div id={`${el.name}-${id}`}>

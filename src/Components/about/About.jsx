@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -20,18 +20,17 @@ const Wrapper = styled.div`
 `;
 
 const About = function () {
+  const { t } = useTranslation();
   return (
     <Wrapper id="about">
       <div>
-        <h2>About me</h2>
+        <h2>{t("header.about")}</h2>
         <p>
-          Я обучаюсь в SF. <br />В свободное
-          время вместе с командой реализуем свой проект. <br /> Мне интересно
-          создание веб-приложений с использованием
-          JavaScript/TypeScript и React. <br /> Я коммуникабелен, стремлюсь к
-          постоянному развитию и адаптируюсь к новым технологиям. <br />
-          Готов брать на себя ответственность и способствовать развитию проектов
-          и компаний.
+          {t("main.about.a")} <br />
+          {t("main.about.b")} <br />
+          {t("main.about.c")} <br />
+          {t("main.about.d")} <br />
+          {t("main.about.e")}
         </p>
       </div>
     </Wrapper>

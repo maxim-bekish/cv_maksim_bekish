@@ -4,6 +4,7 @@ import photoMy from "../../png/photoMyTwo.png";
 import { motion } from "framer-motion";
 
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
 const Wrapper = styled.div`
   padding-top: 45px;
@@ -39,21 +40,38 @@ const Wrapper = styled.div`
       flex-direction: column;
       justify-content: flex-end;
       align-items: flex-end;
-      p {
+      .button-lang {
         font-family: "Gilroy-Bold";
         cursor: pointer;
         text-align: end;
+        background-color: rgba(0, 0, 0, 0);
+        border: 0;
+        font-size: 14px;
         text-transform: uppercase;
+        box-sizing: border-box;
+        width: 50%;
       }
-      div {
-        height: 2px;
-        background: linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 1) 0%,
-          rgba(0, 0, 0, 1) 150%,
-          rgba(0, 0, 0, 1) 100%
+      .button-lang-active {
+        /* position: relative; */
+        background-position: 0 100%;
+        background-size: 100% 3px;
+
+        background-image: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0),
+          rgb(0, 0, 0)
         );
-        width: 150px;
+        background-repeat: no-repeat;
+        animation: animateBorder 2s linear infinite;
+        width: 50%;
+        box-sizing: border-box;
+        font-family: "Gilroy-Bold";
+        cursor: pointer;
+        text-align: end;
+        background-color: rgba(0, 0, 0, 0);
+        border: 0;
+        font-size: 14px;
+        text-transform: uppercase;
       }
     }
   }
@@ -67,6 +85,12 @@ const Wrapper = styled.div`
     }
   }
   @media (max-width: 600px) {
+    .button-lang-active {
+      width: 100% !important;
+    }
+    .button-lang {
+      width: 100% !important ;
+    }
     padding-top: 0px;
     .allLang {
       display: none;
@@ -88,7 +112,14 @@ const textAnimation = {
   visible: { x: 0, opacity: 1 },
 };
 
+const locales = {
+  en: { title: "English" },
+  ru: { title: "Русский" },
+  by: { title: "Беларуский" },
+};
+
 const Home = () => {
+  const { t, i18n } = useTranslation();
   return (
     <motion.section id="home">
       <Wrapper>
@@ -98,13 +129,28 @@ const Home = () => {
             initial={textAnimation.hidden}
             animate={textAnimation.visible}
           >
-            Maksim Bekish
+            {t("main.home.name")}
           </motion.h1>
 
-          <p>FrontEnd developer 26 лет, Минск</p>
+          <p> {t("main.home.about")}</p>
           <div>
-            <p>blr</p>
-            <div></div>
+            {Object.keys(locales).map((locale) => (
+              <button
+                className={`${
+                  i18n.resolvedLanguage === locale
+                    ? "button-lang-active"
+                    : "button-lang"
+                }`}
+                type="submit"
+                onClick={() => {
+                  i18n.changeLanguage(locale);
+                }}
+              >
+                {locales[locale].title}
+              </button>
+            ))}
+
+            {/* <h1>{t("main.header")}</h1> */}
           </div>
         </div>
         <div>

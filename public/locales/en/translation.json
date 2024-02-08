@@ -1,0 +1,84 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About me",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contacts": "Contacts"
+  },
+  "main": {
+    "home": {
+      "name": "Maksim Bekish",
+      "about": "FrontEnd developer 26 years old, Minsk"
+    },
+    "about": {
+      "a": "I am studying at SF in the 'FrontEnd Pro' course.",
+      "b": "In our free time, together with the team, we implement our project.",
+      "c": "I'm interested in creating web applications using JavaScript/TypeScript and React.",
+      "d": "I am sociable, strive for constant development, and adapt to new technologies.",
+      "e": "I am ready to take on responsibility and contribute to the development of projects and companies."
+    },
+    "portfolio": {
+      "dataTable": {
+        "name": "Data table(React)",
+        "description": {
+          "a": "React and functional components for clean and compact code.",
+          "b": "The layout corresponds to the layout, using standard SCSS rules and styled-components for styling.",
+          "c": "Customization of Ant Design library elements to create a convenient interface.",
+          "d": "Ability to choose between day and night themes via useContext.",
+          "e": "Working with various data types: text, numeric, dropdown list, and checkboxes with corresponding components.",
+          "f": "The complexity lay in implementing themes (day/night). Solved using styled-components, useState, and useContext."
+        }
+      },
+      "snake": {
+        "name": "Snake(Game)",
+        "description": {
+          "a": "Using the <canvas> element to create a game field.",
+          "b": "HTML and CSS for the basic structure and visual design.",
+          "c": "JavaScript for managing the logic and visualization of the game.",
+          "d": "Adding functionality to adjust the snake's speed using JavaScript.",
+          "e": "Using the browser's local storage to save the player's name and best score.",
+          "f": "I encountered difficulty with managing the game's lifecycle. The solution was as follows. The function run() is responsible for starting the game. It initiates a countdown timer before the game starts and calls the function gameLoop() after the countdown is finished. The gameLoop() function is the main game loop that updates and displays game elements at a certain frequency. It is called after the countdown timer finishes. It uses requestAnimationFrame to call itself again and update the game state. Keyboard event handlers respond to key presses and change the snake's movement direction."
+        }
+      },
+      "designProject": {
+        "name": "Interior design studio",
+        "description": {
+          "a": "The layout was created in accordance with the layout from Figma, and SCSS was used to style the elements.",
+          "b": "Forms for entering data and sending it to the server were created.",
+          "c": "To ensure the site's adaptability, semantic tags and media queries were used.",
+          "d": "A slider for photos and information was implemented in JavaScript.",
+          "e": "Difficulties arose when creating the JavaScript slider in managing slide movement, synchronizing elements, and handling click events. I used DOM manipulation methods, the CSS 'transform' property for animation, arrays and loops to control elements, and event handlers for navigation."
+        }
+      },
+      "chart": {
+        "name": "Chart (React)",
+        "description": {
+          "a": "Functional components in React: Improving code modularity and readability.",
+          "b": "Semantic tags in markup: Enhancing website accessibility and improving SEO.",
+          "c": "Integration of SVG graphics: Adding attractive visual elements.",
+          "d": "JavaScript and SVG for interactivity: Enhancing user experience and application functionality."
+        }
+      },
+      "youTalk": {
+        "name": "YouTalk",
+        "description": {
+          "a": "When designing the project, I used the Figma layout. Clean CSS with the application of techniques such as grids and flexboxes.",
+          "b": "I used semantic tags such as <header>, <nav>, <section>, <article>, <footer> to make the code understandable and easily readable for both developers and search engines.",
+          "c": "Using grids and flexboxes allowed me to create responsive layout. I used pseudo-classes to add interactive effects.",
+          "d": "As a result, my layout is adapted for all devices and provides a pleasant and intuitively understandable interface."
+        }
+      },
+      "link": "Link to the project",
+      "sectionLeft": {
+        "photo": "Photo",
+        "description": "Description"
+      }
+    }
+  },
+  "footer": {
+    "title": "Do you want to learn more or just chat?",
+    "button": "Send message",
+    "end": "I also wait for you in my social networks."
+  }
+}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 
 const color = "#474747";
@@ -134,7 +135,7 @@ const Wrapper = styled.div`
 
 const CardPortfolio = function ({ props }) {
   const [isActive, setIsActive] = useState(true);
-
+  const { t } = useTranslation();
   return (
     <Wrapper>
       <div>
@@ -149,13 +150,13 @@ const CardPortfolio = function ({ props }) {
             onClick={() => setIsActive(!isActive)}
             className={`btn ${isActive ? "active" : ""}`}
           >
-            Photo
+            {t("main.portfolio.sectionLeft.photo")}
           </button>
           <button
             onClick={() => setIsActive(!isActive)}
             className={`btn ${isActive ? "" : "active"}`}
           >
-            Description
+            {t("main.portfolio.sectionLeft.description")}
           </button>
         </section>
         <section className="sectionRight">
@@ -166,7 +167,9 @@ const CardPortfolio = function ({ props }) {
             {props.description.map((element, id) => {
               return <p id={`key-${id}`}>{element}</p>;
             })}
-            <a target="blanc" href={props.link}>Ссылка на проект</a>
+            <a target="blanc" href={props.link}>
+              {t("main.portfolio.link")}
+            </a>
           </div>
           <img
             style={{ display: `${isActive ? "block" : "none"}` }}

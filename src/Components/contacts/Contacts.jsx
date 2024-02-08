@@ -1,9 +1,4 @@
 import React from "react";
-import gitHubSVG from "../../svg/github.svg";
-import codePenSVG from "../../svg/codePen.svg";
-import instagramSVG from "../../svg/instagram.svg";
-import linkedinSVG from "../../svg/linkedin.svg";
-import telegramSVG from "../../svg/telegram.svg";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 
@@ -97,27 +92,27 @@ const Wrapper = styled.div`
 const arrayContacts = [
   {
     text: "GitHub",
-    logo: require(`../../svg/github.svg`),
+    logo: require(`./../../svg/github.svg`),
     link: "https://github.com/maxim-bekish",
   },
   {
     text: "Linkedin",
-    logo: require(`../../svg/linkedin.svg`),
+    logo: require(`./../../svg/linkedin.svg`),
     link: "https://www.linkedin.com/in/maksim-bekish-819b8920a/",
   },
   {
     text: "CodePen",
-    logo: require(`../../svg/codePen.svg`),
+    logo: require(`./../../svg/codePen.svg`),
     link: "https://codepen.io/maxamax97",
   },
   {
     text: "Instagram",
-    logo: require(`../../svg/instagram.svg`),
+    logo: require(`./../../svg/instagram.svg`),
     link: "https://www.instagram.com/it_maxa_max/",
   },
   {
     text: "Telegram",
-    logo: require(`../../svg/telegram.svg`),
+    logo: require(`./../../svg/telegram.svg`),
     link: "https://t.me/maxa_max",
   },
 ];

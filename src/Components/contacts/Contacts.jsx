@@ -100,11 +100,11 @@ const arrayContacts = [
     logo: require(`./../../svg/linkedin.svg`),
     link: "https://www.linkedin.com/in/maksim-bekish-819b8920a/",
   },
-  {
-    text: "CodePen",
-    logo: require(`./../../svg/codePen.svg`),
-    link: "https://codepen.io/maxamax97",
-  },
+  // {
+  //   text: "CodePen",
+  //   logo: require(`./../../svg/codePen.svg`),
+  //   link: "https://codepen.io/maxamax97",
+  // },
   {
     text: "Instagram",
     logo: require(`./../../svg/instagram.svg`),

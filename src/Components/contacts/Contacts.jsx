@@ -128,7 +128,7 @@ const Contacts = function () {
             <br />
           </p>
           <div>
-            <a target="blanck" href="https://t.me/maxa_max">
+            <a target="blanc" href="https://t.me/maxa_max">
               {t("footer.button")}
             </a>
           </div>

@@ -8,7 +8,6 @@ import { useTranslation } from "react-i18next";
 
 const Wrapper = styled.div`
   padding-top: 45px;
-
   div:nth-child(1) {
     margin: 0px 0 30px 0;
     display: grid;
@@ -16,7 +15,6 @@ const Wrapper = styled.div`
     grid-template-rows: 2fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-
     h1 {
       font-family: "Gilroy-Bold";
       display: grid;
@@ -52,17 +50,14 @@ const Wrapper = styled.div`
         width: 50%;
       }
       .button-lang-active {
-        /* position: relative; */
         background-position: 0 100%;
         background-size: 100% 3px;
-
         background-image: linear-gradient(
           to right,
           rgba(255, 255, 255, 0),
           rgb(0, 0, 0)
         );
         background-repeat: no-repeat;
-        animation: animateBorder 2s linear infinite;
         width: 50%;
         box-sizing: border-box;
         font-family: "Gilroy-Bold";
@@ -78,29 +73,18 @@ const Wrapper = styled.div`
   div:nth-child(2) {
     display: flex;
     flex-direction: column;
-
     img {
       width: 100%;
       max-height: 500px;
     }
   }
   @media (max-width: 600px) {
+    padding-top: 0px;
     .button-lang-active {
       width: 100% !important;
     }
     .button-lang {
       width: 100% !important ;
-    }
-    padding-top: 0px;
-    .allLang {
-      display: none;
-    }
-    .allHome_info {
-      margin: 0;
-      gap: 30px;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
     }
   }
 `;

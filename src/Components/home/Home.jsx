@@ -48,8 +48,12 @@ const Wrapper = styled.div`
         text-transform: uppercase;
         box-sizing: border-box;
         width: 50%;
+        color: black;
+        font-weight: 400;
       }
       .button-lang-active {
+        color: black;
+        font-weight: 400;
         background-position: 0 100%;
         background-size: 100% 3px;
         background-image: linear-gradient(

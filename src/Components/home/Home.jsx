@@ -117,7 +117,7 @@ const locales = {
   ru: { title: "Русский" },
   by: { title: "Беларуский" },
 };
-
+        console.log(locales);
 const Home = () => {
   const { t, i18n } = useTranslation();
   return (
@@ -131,10 +131,9 @@ const Home = () => {
           >
             {t("main.home.name")}
           </motion.h1>
-
           <p> {t("main.home.about")}</p>
           <div>
-            {Object.keys(locales).map((locale) => (
+            {Object.keys(locales).map((locale, id) => (
               <button
                 className={`${
                   i18n.resolvedLanguage === locale
@@ -142,6 +141,7 @@ const Home = () => {
                     : "button-lang"
                 }`}
                 type="submit"
+                key={`key-${locale}-${id}`}
                 onClick={() => {
                   i18n.changeLanguage(locale);
                 }}
@@ -149,7 +149,6 @@ const Home = () => {
                 {locales[locale].title}
               </button>
             ))}
-
             {/* <h1>{t("main.header")}</h1> */}
           </div>
         </div>

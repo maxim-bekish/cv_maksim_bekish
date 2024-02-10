@@ -165,7 +165,7 @@ const CardPortfolio = function ({ props }) {
             className="description"
           >
             {props.description.map((element, id) => {
-              return <p id={`key-${id}`}>{element}</p>;
+              return <p key={`key-${element}-${id}`}>{element}</p>;
             })}
             <a target="blanc" href={props.link}>
               {t("main.portfolio.link")}

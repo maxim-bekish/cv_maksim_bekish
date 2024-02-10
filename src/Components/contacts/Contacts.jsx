@@ -21,11 +21,9 @@ const Wrapper = styled.div`
       div {
         display: flex;
         justify-content: center;
-
         a {
           display: block;
           border: 0;
-
           background: white;
           border-radius: 20px;
           width: 180px;
@@ -97,22 +95,22 @@ const Wrapper = styled.div`
 const arrayContacts = [
   {
     text: "GitHub",
-    logo:  gitHubSVG ,
+    logo: gitHubSVG,
     link: "https://github.com/maxim-bekish",
   },
   {
     text: "Linkedin",
-    logo:  linkedinSVG ,
+    logo: linkedinSVG,
     link: "https://www.linkedin.com/in/maksim-bekish-819b8920a/",
   },
   {
     text: "CodePen",
-    logo:  codePenSVG ,
+    logo: codePenSVG,
     link: "https://codepen.io/maxamax97",
   },
   {
     text: "Instagram",
-    logo:  instagramSVG ,
+    logo: instagramSVG,
     link: "https://www.instagram.com/it_maxa_max/",
   },
   { text: "Telegram", logo: telegramSVG, link: "https://t.me/maxa_max" },
@@ -137,9 +135,9 @@ const Contacts = function () {
         </div>
         <div>
           <div>
-            {arrayContacts.map((el) => {
+            {arrayContacts.map((el, id) => {
               return (
-                <a target="blanc" href={el.link}>
+                <a key={`key-${el}-${id}`} target="blanc" href={el.link}>
                   <img src={el.logo} title={el.name} alt={el.name} />
                 </a>
               );

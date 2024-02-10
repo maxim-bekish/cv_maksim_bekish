@@ -49,7 +49,7 @@ const Skills = function () {
       <h2>{t("header.skills")}</h2>
       <div>
         {skills.map((el, id) => (
-          <div id={`${el.name}-${id}`}>
+          <div key={`key-${el}-${id}`} id={`${el.name}-${id}`}>
             <span>{el.name}</span>
             <motion.img
               whileHover={{

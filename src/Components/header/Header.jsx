@@ -169,9 +169,9 @@ function Header() {
     <Wrapper>
       <motion.div>
         <div onClick={() => setActive(!active)} id="burgerButton">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span key="key-1"></span>
+          <span key="key-2"></span>
+          <span key="key-3"></span>
         </div>
         <nav>
           {headerTitle.map((el, item) => (
@@ -182,6 +182,7 @@ function Header() {
               }}
               initial={listVariants.hidden}
               animate={listVariants.visible(item)}
+              key={`key-${item}`}
             >
               <a href={el.href}>{el.value}</a>
             </motion.li>

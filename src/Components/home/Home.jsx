@@ -117,9 +117,10 @@ const locales = {
   ru: { title: "Русский" },
   by: { title: "Беларуский" },
 };
-        console.log(locales);
+console.log(locales);
 const Home = () => {
   const { t, i18n } = useTranslation();
+
   return (
     <motion.section id="home">
       <Wrapper>
@@ -140,16 +141,14 @@ const Home = () => {
                     ? "button-lang-active"
                     : "button-lang"
                 }`}
-                type="submit"
                 key={`key-${locale}-${id}`}
                 onClick={() => {
                   i18n.changeLanguage(locale);
                 }}
               >
-                {locales[locale].title}
+                {`${locales[locale].title}`}
               </button>
             ))}
-            {/* <h1>{t("main.header")}</h1> */}
           </div>
         </div>
         <div>

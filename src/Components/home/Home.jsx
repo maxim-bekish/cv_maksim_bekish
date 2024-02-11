@@ -103,7 +103,7 @@ const textAnimation = {
 const locales = {
   en: { title: "English" },
   ru: { title: "Русский" },
-  by: { title: "Беларуский" },
+  by: { title: "Беларускі" },
 };
 console.log(locales);
 const Home = () => {

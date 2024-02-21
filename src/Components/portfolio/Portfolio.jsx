@@ -71,6 +71,20 @@ const Portfolio = function () {
         `${t("main.portfolio.chart.description.d")}`,
       ],
     },
+    commentingSystem: {
+      title: `${t("main.portfolio.commentingSystem.name")}`,
+      link: "https://github.com/maxim-bekish/ts_comments",
+      url: require(`../../png/commentingSystem.png`),
+      description: [
+        `${t("main.portfolio.commentingSystem.description.a")}`,
+        `${t("main.portfolio.commentingSystem.description.b")}`,
+        `${t("main.portfolio.commentingSystem.description.c")}`,
+        `${t("main.portfolio.commentingSystem.description.d")}`,
+        `${t("main.portfolio.commentingSystem.description.e")}`,
+        `${t("main.portfolio.commentingSystem.description.f")}`,
+        `${t("main.portfolio.commentingSystem.description.g")}`,
+      ],
+    },
     youTalk: {
       title: `${t("main.portfolio.youTalk.name")}`,
       link: "https://maxim-bekish.github.io/youtalk/",
@@ -88,6 +102,7 @@ const Portfolio = function () {
     <Wrapper id="portfolio">
       <h2>{t("header.portfolio")}</h2>
       <div>
+        <CardPortfolio props={portfolio.commentingSystem} />
         <CardPortfolio props={portfolio.todo} />
         <CardPortfolio props={portfolio.snack} />
         <CardPortfolio props={portfolio.designProject} />

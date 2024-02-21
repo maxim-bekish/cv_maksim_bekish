@@ -19,6 +19,18 @@
       "e": "I am ready to take on responsibility and contribute to the development of projects and companies."
     },
     "portfolio": {
+      "commentingSystem": {
+        "name": "Commenting system",
+        "description": {
+          "a": "Added the ability to add comments and reply to them through an input form with length validation.",
+          "b": "The mechanism for changing the rating of comments and replies is implemented using 'Like' and 'Dislike' buttons.",
+          "c": "Added functionality to add comments and replies to favorites with the ability to undo the action.",
+          "d": "Support sorting of comments based on various parameters: date, rating, number of replies.",
+          "e": "My code is based on TypeScript and ES6 classes, while I strive to adhere to the principles of DRY and KISS.",
+          "f": "For styling the user interface, I use SCSS, and for project assembly and dependency management - Webpack.",
+          "g": "I apply the BEM methodology to organize HTML and CSS code, ensuring modularity and readability of styles and components."
+        }
+      },
       "dataTable": {
         "name": "Data table(React)",
         "description": {
